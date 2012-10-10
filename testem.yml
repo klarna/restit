@@ -1,0 +1,12 @@
+framework: mocha
+src_files:
+- "src/*.coffee"
+- "test/*.coffee"
+launchers:
+  Mocha:
+    command: mocha --growl --compilers coffee:coffee-script --reporter tap --recursive test
+    protocol: tap
+launch_in_dev:
+- Mocha
+launch_in_ci:
+- Mocha
