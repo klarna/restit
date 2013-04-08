@@ -51,30 +51,32 @@ re$ = (new RESTit()).re$
 
 # setup
 myConfig =
-  resources:
+  mediaTypePrefix: 'application/vnd.examples.'
+  mediaTypeSyntax: 'json'
+  resourceNames:
     car:
       acceptedMediaTypes: [
-        'application/vnd.example.car-v1+json'
-        'application/vnd.example.car-race-v1+json'
+        'car'
+        'car-race'
       ]
-      providedMediaTypes: ['application/vnd.example.car-v1+json']
-      patchMediaTypes: ['application/vnd.example.car-patch-v1+json']
+      providedMediaTypes: ['car']
+      patchMediaTypes: ['car-patch']
       operations:
         read:
-          providedMediaTypes: ['application/vnd.example.car-v1+json']
+          providedMediaTypes: ['car']
         race:
-          acceptMediaTypes: ['application/vnd.example.car-race-v1+json']
-          providedMediaTypes: ['application/vnd.example.car-v1+json']
+          acceptMediaTypes: ['car-race']
+          providedMediaTypes: ['car']
     person:
-      providedMediaTypes: ['application/vnd.example.person-v1+json']
+      providedMediaTypes: ['person']
       operations: {
         read:
-          providedMediaTypes: ['application/vnd.example.person-v1+json']
+          providedMediaTypes: ['person']
     root:
-      providedMediaTypes: ['application/vnd.example.root-v1+json']
+      providedMediaTypes: ['root']
       operations:
         read:
-          providedMediaTypes: ['application/vnd.example.root-v1+json']
+          providedMediaTypes: ['root']
   relRoot: 'https://example.com/rels'
   rel2resourceType:
     'https://example.com/rels/car': 'car'
