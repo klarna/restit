@@ -44,6 +44,8 @@ define [
       # Shortcuts
       _.configOption.call @, configOption  for configOption in [
         'resourceNames'
+        'mediaTypePrefix'
+        'mediaTypeSyntax'
         'relRoot'
         'rel2resourceName'
         'errorMediaTypes'

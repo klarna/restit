@@ -247,9 +247,9 @@ define [
       #FIXME merge options.uri.query with options.query ?
 
       #FIXME break this into parse=fix=expand and normalize=toString
-      @_renderBody options
       @_renderAcceptHeader options  if options.headers.accept
       @_renderContentTypeHeader options  if options.headers['content-type']
+      @_renderBody options
 
       # Deal with safeMethods
       safeMethods = ['OPTIONS', 'HEAD', 'GET', 'POST']
