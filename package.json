@@ -39,7 +39,8 @@
     "highlight.js": "~7.3.0",
     "request": "~2.14.0",
     "otw": "git://github.com/andreineculau/otw.git#v0.0.1",
-    "http-status-codes-json": "~2013.02.26"
+    "http-status-codes-json": "~2013.02.26",
+    "amdefine": "~0.0.4"
   },
   "devDependencies": {
     "testem": "~0.2.70",
